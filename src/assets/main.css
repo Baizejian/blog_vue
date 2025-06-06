@@ -3,11 +3,25 @@
 #app {
   width: 100%;
   max-width: none;
-  margin: 0 auto;
-  padding: 2rem;
+  margin: 0;
+  padding: 0;
   font-weight: normal;
 }
 
+/* 导航栏单独设置全宽 */
+.navbar {
+  width: 100%;
+  padding: 1rem 0;
+}
+
+/* 内容区域可以保留合理的内边距 */
+.main-content {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* 保留原有的链接样式 */
 a,
 .green {
   text-decoration: none;
@@ -22,15 +36,9 @@ a,
   }
 }
 
+/* 移除或修改大屏幕布局 */
 @media (min-width: 1024px) {
   body {
-    display: flex;
-    place-items: center;
-  }
-
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
+    display: block; /* 改为常规布局 */
   }
 }
